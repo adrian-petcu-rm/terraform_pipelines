@@ -13,6 +13,7 @@ resource "aws_instance" "test_web" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "Test-Machine-4-Da-Web"
+    Name      = "Test-Machine-4-Da-Web"
+    CreatedBy = "Terraform"
   }
 }

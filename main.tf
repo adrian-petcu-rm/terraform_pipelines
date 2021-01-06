@@ -8,11 +8,11 @@ data "aws_ami" "amazon-linux-2-ami" {
   }
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "test_web" {
   ami           = data.aws_ami.amazon-linux-2-ami.id
   instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "Test-Machine-4-Da-Web"
   }
 }

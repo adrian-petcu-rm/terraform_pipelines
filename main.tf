@@ -17,3 +17,13 @@ resource "aws_instance" "test_web" {
     CreatedBy = "Terraform"
   }
 }
+
+resource "aws_instance" "test_web2" {
+  ami           = data.aws_ami.amazon-linux-2-ami.id
+  instance_type = "t3.micro"
+
+  tags = {
+    Name      = "Test-Machine-4-Da-Web-666"
+    CreatedBy = "Terraform"
+  }
+}

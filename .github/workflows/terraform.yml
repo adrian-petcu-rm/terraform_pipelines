@@ -2,7 +2,7 @@ name: "Terraform"
 on:
   push:
     branches:
-      - test
+      - gigi
 
 jobs:
   terraform:

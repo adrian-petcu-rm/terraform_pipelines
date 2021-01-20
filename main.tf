@@ -18,3 +18,14 @@ resource "aws_instance" "prodmachine" {
     CreatedBy = "Terraform"
   }
 }
+
+
+resource "aws_instance" "prodmachine2" {
+  ami           = data.aws_ami.amazon-linux-2-ami.id
+  instance_type = "t3.micro"
+
+  tags = {
+    Name      = "Production-Baby-777"
+    CreatedBy = "Gigi"
+  }
+}

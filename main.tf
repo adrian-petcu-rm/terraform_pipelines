@@ -8,6 +8,7 @@ data "aws_ami" "amazon-linux-2-ami" {
   }
 }
 
+
 resource "aws_instance" "prodmachine" {
   ami           = data.aws_ami.amazon-linux-2-ami.id
   instance_type = "t3.micro"
